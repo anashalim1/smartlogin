@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     logout.addEventListener("click", function () {
       localStorage.removeItem("currentUser");
 
-      window.location.href = "index.html";
+      window.location.href = "/index.html";
     });
   }
 });
