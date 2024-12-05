@@ -146,6 +146,8 @@ function validateEmail(email) {
   var storedUsername = JSON.parse(localStorage.getItem("users"));
   if (!storedUsername || storedUsername.length === 0) {
     console.log("No users in the system yet.");
+        openModal("No users in the system yet.")
+
     return false; 
   }
   users = storedUsername;
