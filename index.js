@@ -104,12 +104,22 @@ function signin() {
       signinEmailValue === users[i].Email &&
       signinPasswordValue === users[i].password
     ) {
-      localStorage.setItem("currentUser", users[i].name);
+      users.push(newUser);
 
-      openModal("Login successful");
-      window.location.href = "home.html";
-      clearform();
-      return;
+// Save the updated array to localStorage
+localStorage.setItem("users", JSON.stringify(users));
+
+// Log the updated array for debugging
+console.log(JSON.parse(localStorage.getItem("users")));
+
+// Notify the user about successful creation
+openModal("User created successfully");
+
+// Clear the form BEFORE redirecting
+clearform();
+
+// Redirect to index.html
+window.location.href = "index.html";
     }
   }
   console.log("Error: Invalid credentials");
