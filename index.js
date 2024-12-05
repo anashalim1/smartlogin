@@ -9,8 +9,11 @@ const usernameRegex = /^[a-zA-Z]{2,}$/;
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const passwordRegex = /^.{8,}$/;
 
-let users = [];
-
+let users = [{
+  name: "",
+  Email: "",
+  password: "",
+}];
 document.addEventListener("DOMContentLoaded", function () {
   const signupButton = document.getElementById("signupButton");
   const signinButton = document.getElementById("signinButton");
